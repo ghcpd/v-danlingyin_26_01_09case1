@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "total_missing_docs": 5
+  },
+  "details": [
+    {
+      "id": 1,
+      "file": "input.ts",
+      "feature": "Fund type",
+      "missing_items": [
+        "Type definition purpose",
+        "Property descriptions",
+        "Usage context",
+        "Example usage"
+      ],
+      "importance": "The Fund type is the core domain model that other modules depend on; documenting it prevents misuse of fields like `riskLevel` and `nav`."
+    },
+    {
+      "id": 2,
+      "file": "input.ts",
+      "feature": "FundService (class)",
+      "missing_items": [
+        "Class purpose and responsibilities",
+        "Constructor behavior (mutability/ownership)",
+        "When to instantiate vs. reuse"
+      ],
+      "importance": "Explains lifecycle and integration points for the service; important for correct instantiation and avoiding subtle bugs from shared mutable state."
+    },
+    {
+      "id": 3,
+      "file": "input.ts",
+      "feature": "FundService.getFundById",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description",
+        "Return value description (undefined behavior)",
+        "Usage example"
+      ],
+      "importance": "Common lookup API — callers must know that it returns `undefined` when not found and that it uses strict equality."
+    },
+    {
+      "id": 4,
+      "file": "input.ts",
+      "feature": "FundService.filterByRisk",
+      "missing_items": [
+        "Function purpose",
+        "Accepted riskLevel values",
+        "Return value description (empty-array behavior)",
+        "Usage example"
+      ],
+      "importance": "Filtering by risk is a primary selection mechanism; inaccurate assumptions about valid inputs or return shapes can cause runtime errors."
+    },
+    {
+      "id": 5,
+      "file": "input.ts",
+      "feature": "FundService.calculateAverageNav",
+      "missing_items": [
+        "Function purpose",
+        "Return value description (empty-array -> 0)",
+        "Calculation formula",
+        "Behavior with non-finite NAV values"
+      ],
+      "importance": "Financial calculations require precision and clear edge-case handling; callers must know the formula and empty-array behavior."
+    }
+  ]
+}
