@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "total_missing_docs": 6
+  },
+  "details": [
+    {
+      "id": 1,
+      "file": "input.ts",
+      "feature": "Fund (type)",
+      "missing_items": [
+        "Type purpose",
+        "Field descriptions",
+        "Allowed values for fields",
+        "Usage example"
+      ],
+      "importance": "Defines the data shape used across the service and consumers; important for correctness and validation."
+    },
+    {
+      "id": 2,
+      "file": "input.ts",
+      "feature": "FundService.constructor",
+      "missing_items": [
+        "Constructor behavior",
+        "Parameter description",
+        "Mutability / side-effects (does it copy input array?)",
+        "Usage example"
+      ],
+      "importance": "Sets up the service state; callers need to know whether the input array is referenced or copied."
+    },
+    {
+      "id": 3,
+      "file": "input.ts",
+      "feature": "FundService.getFundById",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description",
+        "Return value description (including undefined case)",
+        "Usage example"
+      ],
+      "importance": "Critical for fetching fund data and used by other code paths."
+    },
+    {
+      "id": 4,
+      "file": "input.ts",
+      "feature": "FundService.filterByRisk",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description (allowed risk levels)",
+        "Return value description",
+        "Usage example"
+      ],
+      "importance": "Used to filter funds by risk level; callers must know the allowed values and behavior when no funds match."
+    },
+    {
+      "id": 5,
+      "file": "input.ts",
+      "feature": "FundService.calculateAverageNav",
+      "missing_items": [
+        "Function purpose",
+        "Return value description (including behavior for empty list)",
+        "Edge cases (e.g., NaN in nav)",
+        "Usage example"
+      ],
+      "importance": "Provides a commonly used aggregate metric; callers need to know how empty sets and invalid numbers are handled."
+    },
+    {
+      "id": 6,
+      "file": "input.ts",
+      "feature": "FundService (class-level overview)",
+      "missing_items": [
+        "Overall purpose and responsibilities",
+        "Public API surface summary",
+        "Usage examples",
+        "Notes/limitations"
+      ],
+      "importance": "High-level documentation helps new contributors understand how to use and extend the service safely."
+    }
+  ]
+}
