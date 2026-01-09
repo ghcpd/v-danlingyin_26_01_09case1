@@ -1,0 +1,68 @@
+{
+  "summary": {
+    "total_missing_docs": 5
+  },
+  "details": [
+    {
+      "id": 1,
+      "file": "input.ts",
+      "feature": "Fund",
+      "missing_items": [
+        "Type purpose and usage context",
+        "Detailed descriptions of each field",
+        "Field types and constraints"
+      ],
+      "importance": "Defines the core data structure for fund entities used throughout the application."
+    },
+    {
+      "id": 2,
+      "file": "input.ts",
+      "feature": "FundService",
+      "missing_items": [
+        "Class purpose and responsibilities",
+        "Constructor parameters and initialization behavior",
+        "Overview of public APIs"
+      ],
+      "importance": "Main service class that encapsulates fund management logic and operations."
+    },
+    {
+      "id": 3,
+      "file": "input.ts",
+      "feature": "FundService.getFundById",
+      "missing_items": [
+        "Method purpose and behavior",
+        "Parameter descriptions",
+        "Return value details including undefined case",
+        "Usage examples",
+        "Edge cases"
+      ],
+      "importance": "Essential API for retrieving specific fund data by identifier."
+    },
+    {
+      "id": 4,
+      "file": "input.ts",
+      "feature": "FundService.filterByRisk",
+      "missing_items": [
+        "Method purpose and filtering logic",
+        "Parameter descriptions",
+        "Return value details",
+        "Usage examples",
+        "Supported risk levels"
+      ],
+      "importance": "Key method for categorizing and filtering funds based on risk criteria."
+    },
+    {
+      "id": 5,
+      "file": "input.ts",
+      "feature": "FundService.calculateAverageNav",
+      "missing_items": [
+        "Method purpose and calculation logic",
+        "Parameter descriptions (none)",
+        "Return value details",
+        "Usage examples",
+        "Edge cases like empty fund list"
+      ],
+      "importance": "Important utility for computing aggregate fund metrics."
+    }
+  ]
+}
