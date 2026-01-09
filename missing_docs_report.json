@@ -1,0 +1,75 @@
+{
+  "summary": {
+    "total_missing_docs": 5
+  },
+  "details": [
+    {
+      "id": 1,
+      "file": "input.ts",
+      "feature": "Fund (Type)",
+      "missing_items": [
+        "Type purpose and description",
+        "Individual property documentation",
+        "Valid values and constraints for riskLevel",
+        "Usage examples",
+        "NAV (Net Asset Value) explanation"
+      ],
+      "importance": "The Fund type is the core data structure used throughout the application. Developers need to understand the properties, their purposes, and expected value ranges to correctly work with fund data."
+    },
+    {
+      "id": 2,
+      "file": "input.ts",
+      "feature": "FundService (Class)",
+      "missing_items": [
+        "Class purpose and responsibilities",
+        "How to instantiate the service",
+        "Constructor parameter documentation",
+        "Class-level usage examples",
+        "Thread safety or state management notes"
+      ],
+      "importance": "FundService is the main entry point for fund operations. Clear documentation on initialization and purpose helps developers understand how to integrate this service into their applications."
+    },
+    {
+      "id": 3,
+      "file": "input.ts",
+      "feature": "FundService.getFundById",
+      "missing_items": [
+        "Method purpose",
+        "Parameter documentation (id)",
+        "Return value documentation",
+        "Behavior when fund not found",
+        "Usage examples",
+        "Performance considerations"
+      ],
+      "importance": "This method is the primary way to retrieve individual funds. Developers need clear guidance on expected parameters, return values, and how to handle the undefined case."
+    },
+    {
+      "id": 4,
+      "file": "input.ts",
+      "feature": "FundService.filterByRisk",
+      "missing_items": [
+        "Method purpose",
+        "Parameter documentation (level)",
+        "Return value documentation",
+        "Valid risk level values",
+        "Usage examples",
+        "Behavior when no funds match"
+      ],
+      "importance": "This filtering method is essential for portfolio composition and risk management features. Clear documentation on valid risk levels and behavior ensures correct usage."
+    },
+    {
+      "id": 5,
+      "file": "input.ts",
+      "feature": "FundService.calculateAverageNav",
+      "missing_items": [
+        "Method purpose",
+        "Return value documentation",
+        "Edge case handling (empty fund list)",
+        "Calculation methodology",
+        "Usage examples",
+        "Precision and rounding notes"
+      ],
+      "importance": "This method performs critical financial calculations for portfolio analysis. Developers need to understand how the calculation works, especially edge cases like empty portfolios."
+    }
+  ]
+}
