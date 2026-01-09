@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "total_missing_docs": 5
+  },
+  "details": [
+    {
+      "id": 1,
+      "file": "input.ts",
+      "feature": "Fund (type)",
+      "missing_items": [
+        "Type purpose",
+        "Field descriptions",
+        "Allowed values for riskLevel",
+        "Example usage"
+      ],
+      "importance": "Defines the shape of fund objects used across the module; clear field semantics prevent misuse and bugs."
+    },
+    {
+      "id": 2,
+      "file": "input.ts",
+      "feature": "FundService.constructor",
+      "missing_items": [
+        "Constructor purpose",
+        "Parameters description",
+        "Behavior regarding input array (mutability/clone)",
+        "Usage example"
+      ],
+      "importance": "How the service stores and uses the funds array affects callers (mutations, lifecycle)."
+    },
+    {
+      "id": 3,
+      "file": "input.ts",
+      "feature": "FundService.getFundById",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description",
+        "Return value description (including undefined case)",
+        "Usage example"
+      ],
+      "importance": "This API is critical for fetching fund data and is likely used by downstream components."
+    },
+    {
+      "id": 4,
+      "file": "input.ts",
+      "feature": "FundService.filterByRisk",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description (allowed risk levels)",
+        "Return value description",
+        "Usage example",
+        "Edge cases (no matches)"
+      ],
+      "importance": "Filtering by risk is a common operation for UI and reporting; callers must know allowed inputs and behavior when no funds match."
+    },
+    {
+      "id": 5,
+      "file": "input.ts",
+      "feature": "FundService.calculateAverageNav",
+      "missing_items": [
+        "Function purpose",
+        "Return value description (behavior when no funds)",
+        "Precision/number considerations",
+        "Usage example",
+        "Edge cases (empty list, negative nav values)"
+      ],
+      "importance": "Average NAV is a numeric aggregate used in calculations and display; callers must know how edge cases are handled."
+    }
+  ]
+}
